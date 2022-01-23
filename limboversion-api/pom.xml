@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.gamerduck</groupId>
+    <artifactId>limboversion-parent</artifactId>
+    <version>${revision}</version>
+  </parent>
+  <artifactId>limboversion-api</artifactId>
+
+  <dependencies>
+	<dependency>
+		<groupId>com.loohp</groupId>
+		<artifactId>Limbo</artifactId>
+		<version>0.6.9-ALPHA</version>
+		<scope>provided</scope>
+	</dependency>
+  </dependencies>
+
+  <build>
+    <finalName>LimboVersion-API-${revision}</finalName>
+    <resources>
+      <resource>
+        <filtering>true</filtering>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>config.yml</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+</project>
